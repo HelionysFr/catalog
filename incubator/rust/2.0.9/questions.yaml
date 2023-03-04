@@ -151,6 +151,24 @@ questions:
           schema:
             type: string
             default: "28015"
+        - variable: RCON_PORT
+          label: "RCON_PORT"
+          description: "RCON server port."
+          schema:
+            type: string
+            default: "28016"
+        - variable: RCON_PASSWORD
+          label: "RCON_PASSWORD"
+          description: "RCON password, please change this!"
+          schema:
+            type: string
+            default: "Default"
+        - variable: APP_PORT
+          label: "APP_PORT"
+          description: "Rust+ companion app port."
+          schema:
+            type: string
+            default: "28082"
   - variable: TZ
     label: Timezone
     group: "General Settings"
