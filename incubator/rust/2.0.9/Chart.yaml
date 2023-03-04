@@ -1,5 +1,4 @@
 annotations:
-  truecharts.org/SCALE-support: "true"
   truecharts.org/catagories: |
     - GameServers
 apiVersion: v2
@@ -16,14 +15,10 @@ keywords:
   - rust
   - GameServers
 kubeVersion: ">=1.16.0-0"
-maintainers:
-  - email: info@truecharts.org
-    name: TrueCharts
-    url: https://truecharts.org
 name: rust
 sources:
-  - https://github.com/truecharts/charts/tree/master/charts/incubator/rust
-  - https://hub.docker.com/r/ich777/steamcmd
+  - https://github.com/HelionysFr/catalog/tree/main/incubator/rust
+  - https://hub.docker.com/r/didstopia/rust-server
   - https://www.steampowered.com/
 type: application
 version: 2.0.9

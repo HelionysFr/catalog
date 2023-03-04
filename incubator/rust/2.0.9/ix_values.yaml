@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
-  repository: tccr.io/truecharts/rust
-  tag: latest@sha256:efe01c59101dd5b1bc760be9bb483733954bb95362b287483f44ed21d3b676ef
+  repository: didstopia/rust-server
+  tag: latest
 
 podSecurityContext:
   runAsGroup: 0
@@ -19,6 +19,9 @@ env:
   GAME_ID: "258550"
   GAME_PARAMS: +server.maxplayers 10
   GAME_PORT: "28015"
+  RCON_WEB: "1"
+  RCON_PORT: "28016"
+  APP_PORT: "28082"
   OXIDE_MOD: ""
   SERVER_DISCRIPTION: Simple Unraid Rust Docker Server
   SERVER_NAME: RustDockerServer
@@ -37,8 +40,14 @@ service:
     ports:
       main:
         port: 28015
-        protocol: UDP
+        protocol: BOTH
         targetPort: 28015
+        port: 28016
+        protocol: BOTH
+        targetPort: 28016
+        port: 28082
+        protocol: BOTH
+        targetPort: 28082
 
 persistence:
   serverfiles:
