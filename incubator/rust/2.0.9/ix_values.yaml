@@ -40,13 +40,13 @@ service:
     ports:
       main:
         port: 28015
-        protocol: BOTH
+        protocol: UDP
         targetPort: 28015
         port: 28016
-        protocol: BOTH
+        protocol: UDP
         targetPort: 28016
         port: 28082
-        protocol: BOTH
+        protocol: UDP
         targetPort: 28082
 
 persistence:
