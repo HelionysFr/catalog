@@ -54,6 +54,3 @@ persistence:
   steamcmd:
     enabled: true
     mountPath: /serverdata/steamcmd
-
-portal:
-  enabled: true
