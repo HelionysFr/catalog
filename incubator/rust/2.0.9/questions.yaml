@@ -94,7 +94,7 @@ questions:
           description: "Enter here your extra game startup parameters if needed starting with (eg rcon.port 27016 rcon.password YOURPASSWORD dont forget to add also a new port here on the template page with container and host port set to the corresponding RCON port)"
           schema:
             type: string
-            default: "+server.maxplayers 10 +server.hostname "Helionys Server" +server.description "Test Server !" +server.url "http://rust.helionys.net" +server.identity "HelionysServer"  +app.port 28082"
+            default: "+server.maxplayers 10 +server.hostname 'Helionys Server' +server.description 'Test Server !' +server.url 'http://rust.helionys.net' +server.identity 'HelionysServer'  +app.port 28082"
   - variable: TZ
     label: Timezone
     group: "General Settings"
