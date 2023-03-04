@@ -11,20 +11,9 @@ securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
 
-secretEnv:
-  USERNAME: ""
-  PASSWRD: ""
-
 env:
-  GAME_ID: "258550"
-  GAME_PARAMS: +server.maxplayers 10
-  GAME_PORT: "28015"
-  RCON_PORT: "28016"
-  APP_PORT: "28082"
-  OXIDE_MOD: ""
   SERVER_DISCRIPTION: Simple Unraid Rust Docker Server
   SERVER_NAME: RustDockerServer
-  VALIDATE: false
 
 probes:
   liveness:
