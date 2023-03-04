@@ -42,9 +42,11 @@ service:
         port: 28015
         protocol: UDP
         targetPort: 28015
+    rconport:
         port: 28016
         protocol: UDP
         targetPort: 28016
+    appPort:
         port: 28082
         protocol: UDP
         targetPort: 28082
