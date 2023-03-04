@@ -258,9 +258,9 @@ questions:
                               type: int
                               default: 28015
                               required: true
-- variable: main
-          label: "Main Service"
-          description: "The Primary service on which the healthcheck runs, often the webUI"
+        - variable: rconport
+          label: "RCON Service"
+          description: "RCON port"
           schema:
             additional_attrs: true
             type: dict
@@ -297,18 +297,70 @@ questions:
                   additional_attrs: true
                   type: dict
                   attrs:
-                    - variable: main
-                      label: "Main Service Port Configuration"
+                    - variable: 
+                      label: "RCON Service Port Configuration"
                       schema:
                         additional_attrs: true
                         type: dict
                         attrs:
-                          - variable: port
-                            label: "Server Port"
+                          - variable: rconport
+                            label: "RCON Port"
                             description: "This port exposes the container port on the service"
                             schema:
                               type: int
-                              default: 28015
+                              default: 28016
+                              required: true
+        - variable: appPort
+          label: "App Service"
+          description: "RUST+ app port"
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available and Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: LoadBalancer
+                  enum:
+                    - value: LoadBalancer
+                      description: LoadBalancer (Expose Ports)
+                    - value: ClusterIP
+                      description: ClusterIP (Do Not Expose Ports)
+                    - value: Simple
+                      description: Deprecated CHANGE THIS
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: "MetalLB Only: Selects the Loadbalancer IP to expose on. Required when using PortalButton with MetalLB"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: 
+                      label: "App Service Port Configuration"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: appPort
+                            label: "APP Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 28082
                               required: true
   - variable: serviceexpert
     group: Networking and Services
