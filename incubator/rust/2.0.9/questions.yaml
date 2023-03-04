@@ -264,6 +264,18 @@ questions:
                               type: int
                               default: 28015
                               required: true
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: main
+                      label: "Main Service Port Configuration"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
                           - variable: port
                             label: "RCON Port"
                             description: "This port exposes the container port on the service"
@@ -271,6 +283,18 @@ questions:
                               type: int
                               default: 28016
                               required: true
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: main
+                      label: "Main Service Port Configuration"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
                           - variable: port
                             label: "APP Port"
                             description: "This port exposes the container port on the service"
