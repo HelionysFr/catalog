@@ -11,11 +11,6 @@ securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
 
-env:
-  SERVER_DISCRIPTION: Simple Unraid Rust Docker Server
-  SERVER_NAME: RustDockerServer
-  SERVER_SEED: 
-
 probes:
   liveness:
     enabled: false
