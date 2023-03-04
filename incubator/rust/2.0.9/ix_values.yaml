@@ -30,6 +30,22 @@ service:
         port: 28015
         protocol: UDP
         targetPort: 28015
+      rconport:
+        enable: true
+        ports:
+          rconport:
+            enable: true
+            port: 28016
+            protocol: UDP
+            targetPort: 28016
+      appPort:
+        enable: true
+        ports:
+          appPort:
+            enable: true
+            port: 28082
+            protocol: UDP
+            targetPort: 28082
 
 persistence:
   serverfiles:
