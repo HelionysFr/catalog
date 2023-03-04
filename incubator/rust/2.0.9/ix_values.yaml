@@ -47,13 +47,5 @@ service:
             protocol: UDP
             targetPort: 28082
 
-persistence:
-  serverfiles:
-    enabled: true
-    mountPath: /serverdata/serverfiles
-  steamcmd:
-    enabled: true
-    mountPath: /serverdata/steamcmd
-
 portal:
   enabled: true
