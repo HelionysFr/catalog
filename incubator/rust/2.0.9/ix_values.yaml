@@ -19,7 +19,6 @@ env:
   GAME_ID: "258550"
   GAME_PARAMS: +server.maxplayers 10
   GAME_PORT: "28015"
-  RCON_WEB: "1"
   RCON_PORT: "28016"
   APP_PORT: "28082"
   OXIDE_MOD: ""
@@ -42,14 +41,14 @@ service:
         port: 28015
         protocol: UDP
         targetPort: 28015
-    rconport:
-        port: 28016
-        protocol: UDP
-        targetPort: 28016
-    appPort:
-        port: 28082
-        protocol: UDP
-        targetPort: 28082
+      rconport:
+          port: 28016
+          protocol: TCP
+          targetPort: 28016
+      appPort:
+          port: 28082
+          protocol: TCP
+          targetPort: 28082
 
 persistence:
   serverfiles:

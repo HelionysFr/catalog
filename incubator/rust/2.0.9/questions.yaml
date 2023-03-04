@@ -151,12 +151,6 @@ questions:
           schema:
             type: string
             default: "28015"
-        - variable: RCON_WEB
-          label: "RCON_WEB"
-          description: "Default "1" - set to 1 or 0 to enable or disable the web-based RCON server."
-          schema:
-            type: string
-            default: "1"
         - variable: RCON_PORT
           label: "RCON_PORT"
           description: "RCON server port."
