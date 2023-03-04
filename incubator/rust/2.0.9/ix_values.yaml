@@ -10,6 +10,9 @@ podSecurityContext:
 securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
+  
+env:
+GAME_PARAMS:
 
 probes:
   liveness:
