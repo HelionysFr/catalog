@@ -47,7 +47,7 @@ service:
           rconport:
             enable: true
             port: 28016
-            protocol: TCP
+            protocol: UDP
             targetPort: 28016
       appPort:
         enable: true
@@ -55,7 +55,7 @@ service:
           appPort:
             enable: true
             port: 28082
-            protocol: TCP
+            protocol: UDP
             targetPort: 28082
 
 persistence:
