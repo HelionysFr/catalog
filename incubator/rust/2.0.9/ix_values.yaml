@@ -43,7 +43,7 @@ service:
           appPort:
             enable: true
             port: 28082
-            protocol: TCP
+            protocol: BOTH
             targetPort: 28082
 
 persistence:
