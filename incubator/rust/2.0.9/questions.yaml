@@ -95,24 +95,6 @@ questions:
           schema:
             type: string
             default: ""
-        - variable: SERVER_NAME
-          label: "SERVER_NAME"
-          description: "Name of the Server goes here"
-          schema:
-            type: string
-            default: "RustDockerServer"
-        - variable: SERVER_DISCRIPTION
-          label: "SERVER_DISCRIPTION"
-          description: "Server Description goes here"
-          schema:
-            type: string
-            default: "Simple TrueNAS Rust Docker Server"
-        - variable: SERVER_SEED
-          label: "SERVER_SEED"
-          description: "Server seed"
-          schema:
-            type: string
-            default: ""
   - variable: TZ
     label: Timezone
     group: "General Settings"
