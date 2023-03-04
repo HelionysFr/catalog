@@ -198,7 +198,7 @@ questions:
                               required: true
         - variable: rconport
           label: "RCON Service"
-          description: "RCon monitoring"
+          description: "RCON monitoring"
           schema:
             additional_attrs: true
             type: dict
