@@ -3,6 +3,14 @@ image:
   repository: didstopia/rust-server
   tag: latest
   
+  podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+  
 env:
 GAME_PARAMS:
 
