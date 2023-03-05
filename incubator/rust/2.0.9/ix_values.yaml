@@ -2,25 +2,9 @@ image:
   pullPolicy: IfNotPresent
   repository: didstopia/rust-server
   tag: latest
-
-podSecurityContext:
-  runAsGroup: 0
-  runAsUser: 0
-
-securityContext:
-  readOnlyRootFilesystem: false
-  runAsNonRoot: false
   
 env:
 GAME_PARAMS:
-
-probes:
-  liveness:
-    enabled: false
-  readiness:
-    enabled: false
-  startup:
-    enabled: false
 
 service:
   main:
@@ -45,11 +29,3 @@ service:
             port: 28082
             protocol: BOTH
             targetPort: 28082
-
-persistence:
-  serverfiles:
-    enabled: true
-    mountPath: /serverdata/serverfiles
-  steamcmd:
-    enabled: true
-    mountPath: /serverdata/steamcmd
