@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/traefik
-  tag: 2.10.1@sha256:049aece2d3e7eddabed1e2e4c4bd03ceba372d3b9f461386b262b6cb69369fcf
+  repository: traefik
+  tag: latest
   pullPolicy: IfNotPresent
 manifestManager:
   enabled: true
