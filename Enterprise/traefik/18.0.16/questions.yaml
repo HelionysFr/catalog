@@ -1,21 +1,49 @@
- Include{groups}
+groups:
+
+  - name: General Settings
+    description: General Deployment Settings
+  - name: Workload settings
+    description: Workload Settings
+  - name: App Configuration
+    description: App Specific Config Options
+  - name: Networking and Services
+    description: Configure Network and Services for Container
+  - name: Ingress
+    description: Ingress Configuration
+  - name: Security and Permissions
+    description: Configure Security Context and Permissions
+  - name: Resources and Devices
+    description: "Specify Resources/Devices to be Allocated to Workload"
+  - name: Middlewares
+    description: Traefik Middlewares
+  - name: Metrics
+    description: Metrics
+  - name: Addons
+    description: Addon Configuration
+  - name: VPN
+    description: VPN
+  - name: Advanced
+    description: Advanced Configuration
+  - name: Documentation
+    description: Documentation
+
 portals:
   open:
 # Include{portalLink}
     path: "$kubernetes-resource_configmap_tcportal-open_path"
 questions:
- Include{global}
- Include{workload}
- Include{workloadDeployment}
+# Include{global}
+# Include{workload}
+# Include{workloadDeployment}
 
- Include{replicas1}
- Include{podSpec}
- Include{containerMain}
- Include{containerBasic}
- Include{containerAdvanced}
+# Include{replicas1}
+# Include{podSpec}
+# Include{containerMain}
+# Include{containerBasic}
+# Include{containerAdvanced}
 
- Include{containerConfig}
- Include{podOptions}
+# Include{containerConfig}
+# Include{podOptions}
   - variable: expertIngressClass
     label: Expert Mode
     group: App Configuration
