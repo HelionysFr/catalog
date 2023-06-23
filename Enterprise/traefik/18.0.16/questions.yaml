@@ -44,15 +44,6 @@ questions:
     label: Global Settings
     group: "General Settings"
     schema:
-      type: dict
-      hidden: true
-      attrs:
-        - variable: isSCALE
-          label: Flag this is SCALE
-          schema:
-            type: boolean
-            default: true
-            hidden: true
   - variable: controller
     group: "General Settings"
     label: ""
