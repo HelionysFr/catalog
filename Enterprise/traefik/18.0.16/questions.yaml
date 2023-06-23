@@ -4,18 +4,18 @@ portals:
 # Include{portalLink}
     path: "$kubernetes-resource_configmap_tcportal-open_path"
 questions:
-# Include{global}
-# Include{workload}
-# Include{workloadDeployment}
+ Include{global}
+ Include{workload}
+ Include{workloadDeployment}
 
-# Include{replicas1}
-# Include{podSpec}
-# Include{containerMain}
-# Include{containerBasic}
-# Include{containerAdvanced}
+ Include{replicas1}
+ Include{podSpec}
+ Include{containerMain}
+ Include{containerBasic}
+ Include{containerAdvanced}
 
-# Include{containerConfig}
-# Include{podOptions}
+ Include{containerConfig}
+ Include{podOptions}
   - variable: expertIngressClass
     label: Expert Mode
     group: App Configuration
