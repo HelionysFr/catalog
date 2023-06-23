@@ -7,8 +7,6 @@ groups:
     description: App Specific Config Options
   - name: Networking and Services
     description: Configure Network and Services for Container
-  - name: Ingress
-    description: Ingress Configuration
   - name: Security and Permissions
     description: Configure Security Context and Permissions
   - name: Resources and Devices
@@ -393,68 +391,6 @@ questions:
 # Include{forwardedHeaders}
 # Include{proxyProtocol}
 # Include{ingressRoot}
-        - variable: main
-          label: "Main Ingress"
-          group: Ingress
-          schema:
-            additional_attrs: true
-      type: dict
-      attrs:
-        - variable: main
-          label: "Main Ingress"
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-              - variable: enabled
-                label: Enable Ingress
-                schema:
-                  type: boolean
-                  default: false
-                  show_subquestions_if: true
-                  subquestions:
-                    - variable: hosts
-                      label: Hosts
-                      schema:
-                        type: list
-                        default: []
-                        items:
-                          - variable: hostEntry
-                            label: Host
-                            schema:
-                              additional_attrs: true
-                              type: dict
-                              attrs:
-                                - variable: host
-                                  label: HostName
-                                  schema:
-                                    type: string
-                                    default: ""
-                                    required: true
-                                - variable: paths
-                                  label: Paths
-                                  schema:
-                                    type: list
-                                    default: []
-                                    items:
-                                      - variable: pathEntry
-                                        label: Host
-                                        schema:
-                                          additional_attrs: true
-                                          type: dict
-                                          attrs:
-                                            - variable: path
-                                              label: Path
-                                              schema:
-                                                type: string
-                                                required: true
-                                                default: "/"
-                                            - variable: pathType
-                                              label: Path Type
-                                              schema:
-                                                type: string
-                                                required: true
-                                                default: Prefix
 # Include{ingressDefault}
 # Include{ingressTLS}
 # Include{ingressTraefik}
