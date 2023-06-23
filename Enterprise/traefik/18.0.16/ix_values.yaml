@@ -1,6 +1,6 @@
 image:
   repository: traefik
-  tag: v3.0
+  tag: latest
   pullPolicy: IfNotPresent
 manifestManager:
   enabled: true
