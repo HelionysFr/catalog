@@ -42,6 +42,52 @@ questions:
 
 # Include{containerConfig}
 # Include{podOptions}
+  - variable: global
+    label: Global Settings
+    group: "General Settings"
+    schema:
+      type: dict
+      hidden: true
+      attrs:
+        - variable: isSCALE
+          label: Flag this is SCALE
+          schema:
+            type: boolean
+            default: true
+            hidden: true
+  - variable: controller
+    group: "General Settings"
+    label: ""
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: replicas
+          description: Number of desired pod replicas
+          label: Desired Replicas
+          schema:
+            type: int
+            required: true
+            default: 1
+  - variable: customextraargs
+    group: "General Settings"
+    label: "Extra Args"
+    description: "Do not click this unless you know what you are doing"
+    schema:
+      type: boolean
+      default: false
+      show_subquestions_if: true
+      subquestions:
+        - variable: extraArgs
+          label: Extra Args
+          schema:
+            type: list
+            default: []
+            items:
+              - variable: arg
+                label: Arg
+                schema:
+                  type: string
   - variable: expertIngressClass
     label: Expert Mode
     group: App Configuration
@@ -394,10 +440,66 @@ questions:
 # Include{ingressRoot}
         - variable: main
           label: "Main Ingress"
+          group: Ingress
+          schema:
+            additional_attrs: true
+      type: dict
+      attrs:
+        - variable: main
+          label: "Main Ingress"
           schema:
             additional_attrs: true
             type: dict
             attrs:
+              - variable: enabled
+                label: Enable Ingress
+                schema:
+                  type: boolean
+                  default: false
+                  show_subquestions_if: true
+                  subquestions:
+                    - variable: hosts
+                      label: Hosts
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: hostEntry
+                            label: Host
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: host
+                                  label: HostName
+                                  schema:
+                                    type: string
+                                    default: ""
+                                    required: true
+                                - variable: paths
+                                  label: Paths
+                                  schema:
+                                    type: list
+                                    default: []
+                                    items:
+                                      - variable: pathEntry
+                                        label: Host
+                                        schema:
+                                          additional_attrs: true
+                                          type: dict
+                                          attrs:
+                                            - variable: path
+                                              label: Path
+                                              schema:
+                                                type: string
+                                                required: true
+                                                default: "/"
+                                            - variable: pathType
+                                              label: Path Type
+                                              schema:
+                                                type: string
+                                                required: true
+                                                default: Prefix
 # Include{ingressDefault}
 # Include{ingressTLS}
 # Include{ingressTraefik}
