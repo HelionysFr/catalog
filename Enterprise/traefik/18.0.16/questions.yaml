@@ -72,7 +72,7 @@ questions:
                   default: false
   - variable: logs
     label: "Logs"
-    group: "App Configuration"
+    group: App Configuration
     schema:
       additional_attrs: true
       type: dict
