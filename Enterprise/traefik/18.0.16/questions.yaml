@@ -1,5 +1,4 @@
 groups:
-
   - name: General Settings
     description: General Deployment Settings
   - name: Workload settings
@@ -26,7 +25,6 @@ groups:
     description: Advanced Configuration
   - name: Documentation
     description: Documentation
-
 portals:
   open:
 # Include{portalLink}
