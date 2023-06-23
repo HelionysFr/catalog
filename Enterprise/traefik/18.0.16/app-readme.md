@@ -1,4 +1,4 @@
-This Chart will download and install SteamCMD. It will also install RUST and run it.
+Traefik is a flexible reverse proxy and ingress provider.
 
 This App is supplied by TrueCharts, for more information visit the manual: [https://truecharts.org/charts/enterprise/traefik](https://truecharts.org/charts/enterprise/traefik)
 
