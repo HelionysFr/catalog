@@ -40,7 +40,63 @@ questions:
 
 # Include{containerConfig}
 # Include{podOptions}
-  
+  - variable: global
+    label: Global Settings
+    group: "General Settings"
+    schema:
+      type: dict
+      hidden: true
+      attrs:
+        - variable: isSCALE
+          label: Flag this is SCALE
+          schema:
+            type: boolean
+            default: true
+            hidden: true
+  - variable: controller
+    group: "General Settings"
+    label: ""
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: replicas
+          description: Number of desired pod replicas
+          label: Desired Replicas
+          schema:
+            type: int
+            required: true
+            default: 1
+  - variable: TZ
+    label: Timezone
+    group: "General Settings"
+    schema:
+      type: string
+      default: "Etc/UTC"
+      $ref:
+        - "definitions/timezone"
+  - variable: envList
+    label: Extra Environment Variables
+    description: "Please be aware that some variables are set in the background, adding duplicates here might cause issues or prevent the app from starting..."
+    group: "General Settings"
+    schema:
+      type: list
+      default: []
+      items:
+        - variable: envItem
+          label: Environment Variable
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: name
+                label: Name
+                schema:
+                  type: string
+              - variable: value
+                label: Value
+                schema:
+                  type: string
   - variable: expertIngressClass
     label: Expert Mode
     group: App Configuration
