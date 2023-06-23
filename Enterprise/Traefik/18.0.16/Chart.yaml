@@ -5,7 +5,7 @@ dependencies:
     repository: https://library-charts.truecharts.org
     version: 12.14.2
 deprecated: false
-description: "Traefik is a flexible reverse proxy and Ingress Provider."
+description: Traefik is a flexible reverse proxy and Ingress Provider.
 icon: https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png
 keywords:
   - traefik
