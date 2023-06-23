@@ -1,21 +1,21 @@
-# Include{groups}
+ Include{groups}
 portals:
   open:
-# Include{portalLink}
+ Include{portalLink}
     path: "$kubernetes-resource_configmap_tcportal-open_path"
 questions:
-# Include{global}
-# Include{workload}
-# Include{workloadDeployment}
+ Include{global}
+ Include{workload}
+ Include{workloadDeployment}
 
-# Include{replicas1}
-# Include{podSpec}
-# Include{containerMain}
-# Include{containerBasic}
-# Include{containerAdvanced}
+ Include{replicas1}
+ Include{podSpec}
+ Include{containerMain}
+ Include{containerBasic}
+ Include{containerAdvanced}
 
-# Include{containerConfig}
-# Include{podOptions}
+ Include{containerConfig}
+ Include{podOptions}
   - variable: expertIngressClass
     label: Expert Mode
     group: App Configuration
@@ -182,18 +182,18 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-# Include{basicAuthMiddleware}
-# Include{forwardAuthMiddleware}
-# Include{chainMiddleware}
-# Include{redirectSchemeMiddleware}
-# Include{rateLimitMiddleware}
-# Include{redirectRegexMiddleware}
-# Include{stripPrefixRegexMiddleware}
-# Include{ipWhitelistMiddleware}
-# Include{themeParkMiddleware}
-# Include{realIPMiddleware}
-# Include{geoBlockMiddleware}
-# Include{addPrefixMiddleware}
+ Include{basicAuthMiddleware}
+ Include{forwardAuthMiddleware}
+ Include{chainMiddleware}
+ Include{redirectSchemeMiddleware}
+ Include{rateLimitMiddleware}
+ Include{redirectRegexMiddleware}
+ Include{stripPrefixRegexMiddleware}
+ Include{ipWhitelistMiddleware}
+ Include{themeParkMiddleware}
+ Include{realIPMiddleware}
+ Include{geoBlockMiddleware}
+ Include{addPrefixMiddleware}
   - variable: service
     group: "Networking and Services"
     label: "Configure Service Entrypoint"
@@ -208,8 +208,8 @@ questions:
             additional_attrs: true
             type: dict
             attrs:
-# Include{serviceSelectorLoadBalancer}
-# Include{serviceSelectorExtras}
+ Include{serviceSelectorLoadBalancer}
+ Include{serviceSelectorExtras}
                     - variable: main
                       label: "Main Entrypoint Configuration"
                       schema:
@@ -229,8 +229,8 @@ questions:
             additional_attrs: true
             type: dict
             attrs:
-# Include{serviceSelectorLoadBalancer}
-# Include{serviceSelectorExtras}
+ Include{serviceSelectorLoadBalancer}
+ Include{serviceSelectorExtras}
                     - variable: web
                       label: "web Entrypoint Configuration"
                       schema:
@@ -259,8 +259,8 @@ questions:
                                   schema:
                                     type: string
                                     default: "websecure"
-# Include{forwardedHeaders}
-# Include{proxyProtocol}
+ Include{forwardedHeaders}
+ Include{proxyProtocol}
                     - variable: websecure
                       label: "websecure Entrypoints Configuration"
                       schema:
@@ -288,8 +288,8 @@ questions:
                                   label: "Redirect to Entrypoint"
                                   schema:
                                     type: string
-# Include{forwardedHeaders}
-# Include{proxyProtocol}
+ Include{forwardedHeaders}
+ Include{proxyProtocol}
                           - variable: tls
                             label: "websecure Entrypoints Configuration"
                             schema:
@@ -363,21 +363,21 @@ questions:
                                   label: "Redirect to Entrypoint"
                                   schema:
                                     type: string
-# Include{forwardedHeaders}
-# Include{proxyProtocol}
-# Include{ingressRoot}
+ Include{forwardedHeaders}
+ Include{proxyProtocol}
+ Include{ingressRoot}
         - variable: main
           label: "Main Ingress"
           schema:
             additional_attrs: true
             type: dict
             attrs:
-# Include{ingressDefault}
-# Include{ingressTLS}
-# Include{ingressTraefik}
-# Include{ingressAdvanced}
-# Include{ingressList}
-# Include{securityContextRoot}
+ Include{ingressDefault}
+ Include{ingressTLS}
+ Include{ingressTraefik}
+ Include{ingressAdvanced}
+ Include{ingressList}
+ Include{securityContextRoot}
               - variable: runAsUser
                 label: "runAsUser"
                 description: "The UserID of the user running the application"
@@ -390,9 +390,9 @@ questions:
                 schema:
                   type: int
                   default: 568
-# Include{securityContextContainer}
-# Include{securityContextAdvanced}
-# Include{securityContextPod}
+ Include{securityContextContainer}
+ Include{securityContextAdvanced}
+ Include{securityContextPod}
               - variable: fsGroup
                 label: "fsGroup"
                 description: "The group that should own ALL storage."
@@ -400,12 +400,12 @@ questions:
                   type: int
                   default: 568
 
-# Include{resources}
-# Include{metrics}
-# Include{prometheusRule}
-# Include{advanced}
-# Include{addons}
-# Include{codeserver}
-# Include{netshoot}
-# Include{vpn}
-# Include{documentation}
+ Include{resources}
+ Include{metrics}
+ Include{prometheusRule}
+ Include{advanced}
+ Include{addons}
+ Include{codeserver}
+ Include{netshoot}
+ Include{vpn}
+ Include{documentation}
