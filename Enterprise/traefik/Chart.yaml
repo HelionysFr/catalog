@@ -6,7 +6,7 @@ dependencies:
     version: 12.14.2
 deprecated: false
 description: Traefik is a flexible reverse proxy and Ingress Provider.
-home: https://github.com/HelionysFr/catalog/enterprise/traefik
+home: https://github.com/HelionysFr/catalog/tree/main/Enterprise/traefik
 icon: https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png
 keywords:
   - traefik
