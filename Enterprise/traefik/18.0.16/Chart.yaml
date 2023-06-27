@@ -11,20 +11,19 @@ icon: https://truecharts.org/img/hotlink-ok/chart-icons/traefik.png
 keywords:
   - traefik
   - ingress
-  - crowdsec
 kubeVersion: ">=1.16.0-0"
 maintainers:
   - email: info@truecharts.org
     name: TrueCharts
     url: https://truecharts.org
-name: traefikcrowdsec
+name: traefik
 sources:
   - https://github.com/truecharts/charts/tree/master/charts/enterprise/traefik
   - https://github.com/traefik/traefik
   - https://github.com/traefik/traefik-helm-chart
   - https://traefik.io/
 type: application
-version: 1.0.0
+version: 18.0.16
 annotations:
   truecharts.org/catagories: |
     - network
