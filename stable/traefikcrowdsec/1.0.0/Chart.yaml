@@ -17,7 +17,7 @@ maintainers:
   - email: info@truecharts.org
     name: TrueCharts
     url: https://truecharts.org
-name: traefik
+name: traefikcrowdsec
 sources:
   - https://github.com/truecharts/charts/tree/master/charts/enterprise/traefik
   - https://github.com/traefik/traefik
