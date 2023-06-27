@@ -28,6 +28,5 @@ version: 1.0.0
 annotations:
   truecharts.org/catagories: |
     - network
-    - security
   truecharts.org/SCALE-support: "true"
   truecharts.org/grade: U
