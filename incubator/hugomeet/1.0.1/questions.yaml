@@ -290,7 +290,7 @@ questions:
                   additional_attrs: true
                   type: dict
                   attrs:
-                    - variable: main
+                    - variable: second
                       label: Second Service Port Configuration
                       schema:
                         additional_attrs: true
