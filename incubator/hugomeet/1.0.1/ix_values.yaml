@@ -1,0 +1,24 @@
+image:
+  repository: helionys/hugomeet
+  pullPolicy: IfNotPresent
+  tag: latest
+
+securityContext:
+  container:
+    runAsNonRoot: false
+    readOnlyRootFilesystem: false
+    privileged: true
+    allowPrivilegeEscalation: true
+    runAsUser: 0
+    runAsGroup: 0
+
+service:
+  main:
+    ports:
+      main:
+        port: 3000
+        targetPort: 3000
+
+portal:
+  open:
+    enabled: true

@@ -1,0 +1,25 @@
+apiVersion: v2
+appVersion: "2023.08.30"
+deprecated: false
+description: This is a project that I made by myself, it's a GoogleMeet plateform like, using JS, REACT and WebRTC.
+home: https://github.com/hcabel/HugoMeet/tree/main
+icon: https://github.com/HelionysFr/catalog/blob/main/incubator/hugomeet/HugoMeetLogo-256x256.png?raw=true
+keywords:
+  - hugomeet
+  - meet
+  - voice
+
+kubeVersion: ">=1.16.0-0"
+maintainers:
+  - email: Heli0nys@proton.me
+    name: Helionys
+    url: 
+name: hugomeet
+sources:
+  - https://github.com/hcabel/HugoMeet/tree/main
+type: application
+version: 14.0.24
+annotations:
+  truecharts.org/catagories: |
+    - tools
+  truecharts.org/SCALE-support: "true"
