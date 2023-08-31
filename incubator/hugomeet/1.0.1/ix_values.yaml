@@ -18,14 +18,11 @@ service:
       main:
         port: 3000
         targetPort: 3000
-
   second:
-  enabled: true
     ports:
       second:
         port: 8045
         targetPort: 8045
-
 configmap:
   init:
     enabled: true
