@@ -18,14 +18,14 @@ service:
       main:
         port: 3000
         targetPort: 3000
-        protocol: http
+
   second:
   enabled: true
     ports:
       second:
         port: 8045
         targetPort: 8045
-        protocol: wss
+
 configmap:
   init:
     enabled: true
