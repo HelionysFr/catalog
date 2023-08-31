@@ -45,4 +45,3 @@ configmap:
 portal:
   open:
     enabled: true
-    path: /
