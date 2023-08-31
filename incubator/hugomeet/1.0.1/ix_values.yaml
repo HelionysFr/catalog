@@ -29,11 +29,12 @@ service:
         port: 3000
         targetPort: 3000
         protocol: http
-  second:
+  signaling:
     ports:
-      second:
+      signaling:
         port: 8045
-        
+        targetPort: 8045
+        protocol: wss
 configmap:
   init:
     enabled: true

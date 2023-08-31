@@ -284,14 +284,7 @@ questions:
                               type: int
                               default: 3000
                               required: true
-  - variable: service
-    group: Networking and Services
-    label: Configure Service(s)
-    schema:
-      additional_attrs: true
-      type: dict
-      attrs:
-        - variable: second
+        - variable: signaling
           label: "Second Service"
           description: "The secondary service is for signaling server"
           schema:
@@ -328,7 +321,7 @@ questions:
                   additional_attrs: true
                   type: dict
                   attrs:
-                    - variable: second
+                    - variable: signaling
                       label: Second Service Port Configuration
                       schema:
                         additional_attrs: true
