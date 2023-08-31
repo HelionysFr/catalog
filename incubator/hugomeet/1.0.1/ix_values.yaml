@@ -33,8 +33,7 @@ service:
     ports:
       second:
         port: 8045
-        targetPort: 8045
-        protocol: wss
+        
 configmap:
   init:
     enabled: true
