@@ -18,6 +18,8 @@ service:
       main:
         port: 3000
         targetPort: 3000
+  second:
+    ports:
       second:
         port: 8045
         targetPort: 8045
