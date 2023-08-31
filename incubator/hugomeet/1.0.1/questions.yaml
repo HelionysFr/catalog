@@ -284,6 +284,44 @@ questions:
                               type: int
                               default: 3000
                               required: true
+  - variable: service
+    group: Networking and Services
+    label: Configure Service(s)
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: second
+          label: "Second Service"
+          description: "The secondary service is for signaling server"
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available and Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: LoadBalancer
+                  enum:
+                    - value: LoadBalancer
+                      description: LoadBalancer (Expose Ports)
+                    - value: ClusterIP
+                      description: ClusterIP (Do Not Expose Ports)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: "MetalLB Only: Selects the Loadbalancer IP to expose on. Required when using PortalButton with MetalLB"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
               - variable: ports
                 label: "Service's Port(s) Configuration"
                 schema:
