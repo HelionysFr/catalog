@@ -2,6 +2,16 @@ image:
   repository: helionys/hugomeet
   pullPolicy: IfNotPresent
   tag: latest
+manifestManager:
+  enabled: true
+workload:
+  main:
+    replicas: 2
+    strategy: RollingUpdate
+    podSpec:
+      containers:
+        main:
+          args: []
 
 securityContext:
   container:
@@ -18,11 +28,13 @@ service:
       main:
         port: 3000
         targetPort: 3000
+        protocol: http
   second:
     ports:
       second:
         port: 8045
         targetPort: 8045
+        protocol: wss
 configmap:
   init:
     enabled: true
@@ -42,3 +54,4 @@ configmap:
 portal:
   open:
     enabled: true
+    path: /
