@@ -2,16 +2,6 @@ image:
   repository: helionys/hugomeet
   pullPolicy: IfNotPresent
   tag: latest
-manifestManager:
-  enabled: true
-workload:
-  main:
-    replicas: 2
-    strategy: RollingUpdate
-    podSpec:
-      containers:
-        main:
-          args: []
 
 securityContext:
   container:
