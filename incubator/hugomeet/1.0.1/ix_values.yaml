@@ -41,7 +41,7 @@ service:
         enabled: true
         port: 8042
         targetPort: 8042
-        protocol: tcp
+        protocol: https
 
 portal:
   open:
