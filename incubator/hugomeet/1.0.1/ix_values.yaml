@@ -22,6 +22,11 @@ securityContext:
     runAsUser: 0
     runAsGroup: 0
 
+persistence:
+  app:
+    enabled: true
+    mountPath: /app
+
 service:
   main:
     ports:
@@ -29,27 +34,14 @@ service:
         port: 3000
         targetPort: 3000
         protocol: http
-  signaling:
-    ports:
-      signaling:
-        port: 8045
-        targetPort: 8045
-        protocol: wss
-configmap:
-  init:
+  signalling:
     enabled: true
-    data:
-      http.default: |-
-        http:
-          use_x_forwarded_for: true
-          trusted_proxies:
-            {{- if hasKey .Values "ixChartContext" }}
-            - {{ .Values.ixChartContext.kubernetes_config.cluster_cidr }}
-            {{- else }}
-              {{- range .Values.hugomeet.trusted_proxies }}
-            - {{ . }}
-              {{- end }}
-            {{- end }}
+    ports:
+      signalling:
+        enabled: true
+        port: 8042
+        targetPort: 8042
+        protocol: tcp
 
 portal:
   open:
