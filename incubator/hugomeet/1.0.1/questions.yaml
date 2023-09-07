@@ -284,7 +284,7 @@ questions:
                               type: int
                               default: 3000
                               required: true
-                - variable: signalling
+        - variable: signalling
           label: "signalling Service"
           description: "The webhook service"
           schema:
