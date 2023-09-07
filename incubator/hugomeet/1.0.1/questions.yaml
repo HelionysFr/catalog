@@ -334,7 +334,6 @@ questions:
                               type: int
                               default: 8042
                               required: true
-  # Configure app volumes
   - variable: serviceexpert
     group: Networking and Services
     label: Show Expert Config
@@ -354,6 +353,7 @@ questions:
                 description: Interface Configuration
                 label: Interface Configuration
                 schema:
+                  additional_attrs: true
                   type: dict
                   $ref:
                     - "normalize/interfaceConfiguration"
@@ -370,6 +370,7 @@ questions:
                       description: Define how IP Address will be managed
                       label: IP Address Management
                       schema:
+                        additional_attrs: true
                         type: dict
                         required: true
                         attrs:
