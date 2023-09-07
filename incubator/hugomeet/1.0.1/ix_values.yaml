@@ -22,10 +22,6 @@ securityContext:
     runAsUser: 0
     runAsGroup: 0
 
-persistence:
-  app:
-    enabled: true
-
 service:
   main:
     ports:
