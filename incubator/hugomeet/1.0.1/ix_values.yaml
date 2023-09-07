@@ -33,12 +33,14 @@ service:
       main:
         port: 3000
         targetPort: 3000
-        protocol: http
+        protocol: https
   signalling:
+    enabled: true
     ports:
       signalling:
-        port: 8045
-        targetPort: 8045
+        enabled: true
+        port: 8042
+        targetPort: 8042
         protocol: wss
 
 portal:
