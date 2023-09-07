@@ -25,7 +25,7 @@ securityContext:
 persistence:
   app:
     enabled: true
-    mountPath: /app
+    mountPath: /
 
 service:
   main:
@@ -40,21 +40,6 @@ service:
         port: 8045
         targetPort: 8045
         protocol: wss
-configmap:
-  init:
-    enabled: true
-    data:
-      http.default: |-
-        http:
-          use_x_forwarded_for: true
-          trusted_proxies:
-            {{- if hasKey .Values "ixChartContext" }}
-            - {{ .Values.ixChartContext.kubernetes_config.cluster_cidr }}
-            {{- else }}
-              {{- range .Values.hugomeet.trusted_proxies }}
-            - {{ . }}
-              {{- end }}
-            {{- end }}
 
 portal:
   open:
