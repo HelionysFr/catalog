@@ -25,7 +25,7 @@ securityContext:
 persistence:
   app:
     enabled: true
-    mountPath: /
+    mountPath: /app
 
 service:
   main:
