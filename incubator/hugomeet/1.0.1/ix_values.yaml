@@ -41,7 +41,7 @@ service:
         enabled: true
         port: 8042
         targetPort: 8042
-        protocol: wss
+        protocol: tcp
 
 portal:
   open:
