@@ -284,6 +284,13 @@ questions:
                               type: int
                               default: 3000
                               required: true
+      - variable: service
+      group: Networking and Services
+      label: Configure Service(s)
+      schema:
+        additional_attrs: true
+        type: dict
+        attrs:
         - variable: signalling
           label: "signalling Service"
           description: "The webhook service"
