@@ -39,7 +39,7 @@ service:
       signaling:
         port: 8045
         targetPort: 8045
-        protocol: wss
+        protocol: tcp
 
 portal:
   open:
